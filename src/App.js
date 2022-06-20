@@ -10,7 +10,7 @@ function App() {
   const [loggedIn,setLoggedIn] = useState(false)
   const loginBtnHandler = () => {
     setLoggedIn(true)
-    navigate('/')
+    navigate('/admin-page-react/')
   }
   const logoutBtnHandler = () => {
     setLoggedIn(false)
@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="App">
         <Routes>
-          <Route path="/">
-            <Route index element={<Home loggedIn={loggedIn} logoutBtnHandler={logoutBtnHandler}/>} />
-            <Route path="/profile" element={<Profile/>}/>
-            <Route path="login" element={<Login loginBtnHandler={loginBtnHandler}/>} />
-            <Route path="users">
+          <Route path="/admin-page-react/">
+            <Route index element={<ProtectedRoute isLoggedIn={loggedIn}><Home loggedIn={loggedIn} logoutBtnHandler={logoutBtnHandler}/></ProtectedRoute>} />
+            <Route path="/admin-page-react/profile" element={<Profile/>}/>
+            <Route path="/admin-page-react/login" element={<Login loginBtnHandler={loginBtnHandler}/>} />
+            <Route path="/admin-page-react/users">
               <Route index element={<List />} />
             </Route>
           </Route>
@@ -32,11 +32,11 @@ function App() {
   );
 }
 
-// const ProtectedRoute = ({ isLoggedIn, children }) => {
-//   if (!isLoggedIn) {
-//     return <Navigate to="/login" replace />;
-//   }
-//   return children;
-// };
+const ProtectedRoute = ({ isLoggedIn, children }) => {
+  if (!isLoggedIn) {
+    return <Navigate to="/admin-page-react/login" replace />;
+  }
+  return children;
+};
 
 export default App;

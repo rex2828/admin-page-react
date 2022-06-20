@@ -15,19 +15,19 @@ const Sidebar = ({logoutBtnHandler}) => {
         <ul>
           <li>
             <DashboardIcon className='icon'/>
-            <span><Link to='/' className='link'>Dashboard</Link></span>
+            <span><Link to='/admin-page-react/' className='link'>Dashboard</Link></span>
           </li>
           <li>
             <PersonOutlinedIcon className='icon'/>
-            <span><Link to='/users' className='link'>Users</Link></span>
+            <span><Link to='/admin-page-react/users' className='link'>Users</Link></span>
           </li>
           <li>
             <AccountCircleIcon className='icon'/>
-            <span><Link to='/profile' className='link'>Profile</Link></span>
+            <span><Link to='/admin-page-react/profile' className='link'>Profile</Link></span>
           </li>
           <li>
             <LogoutOutlinedIcon className='icon'/>
-            <span><Link to='/login' className='link' onClick={logoutBtnHandler}>Logout</Link></span>
+            <span><Link to='/admin-page-react/login' className='link' onClick={logoutBtnHandler}>Logout</Link></span>
           </li>
         </ul>
       </div>

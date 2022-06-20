@@ -20,7 +20,7 @@ function App() {
     <div className="App">
         <Routes>
           <Route path="/">
-            <Route index element={<ProtectedRoute isLoggedIn={loggedIn}><Home loggedIn={loggedIn} logoutBtnHandler={logoutBtnHandler}/></ProtectedRoute>} />
+            <Route index element={<Home loggedIn={loggedIn} logoutBtnHandler={logoutBtnHandler}/>} />
             <Route path="/profile" element={<Profile/>}/>
             <Route path="login" element={<Login loginBtnHandler={loginBtnHandler}/>} />
             <Route path="users">
@@ -32,11 +32,11 @@ function App() {
   );
 }
 
-const ProtectedRoute = ({ isLoggedIn, children }) => {
-  if (!isLoggedIn) {
-    return <Navigate to="/login" replace />;
-  }
-  return children;
-};
+// const ProtectedRoute = ({ isLoggedIn, children }) => {
+//   if (!isLoggedIn) {
+//     return <Navigate to="/login" replace />;
+//   }
+//   return children;
+// };
 
 export default App;

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/admin-page-react/static/css/main.f2e1d7a5.css",
+    "main.js": "/admin-page-react/static/js/main.3f1c1156.js",
+    "index.html": "/admin-page-react/index.html",
+    "main.f2e1d7a5.css.map": "/admin-page-react/static/css/main.f2e1d7a5.css.map",
+    "main.3f1c1156.js.map": "/admin-page-react/static/js/main.3f1c1156.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2e1d7a5.css",
+    "static/js/main.3f1c1156.js"
+  ]
+}
